@@ -21,7 +21,7 @@
         border-end-start-radius: 10px;
 
         &:hover {
-            color: rgba(0, 0, 0, .5);
+            color: #333333;
             background: #fdfdfd;
             transition: ease .5s;
             cursor: pointer;
@@ -105,8 +105,9 @@
             &:hover {
                 cursor: pointer;
                 background: #333333;
+                transition: ease .4s;
+                font-weight: bold;
                 color: #fdfdfd;
-                transition: ease .5s;
             }
 
             &:nth-child(1) {
@@ -128,11 +129,6 @@
 
         &__link {
             color: inherit;
-
-            &:hover {
-                color: lightcoral;
-                transition: ease .5s;
-            }
         }
     }
 }

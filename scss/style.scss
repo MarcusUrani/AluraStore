@@ -11,7 +11,7 @@
     grid-row-end: $row-end;
 }
 
-@import "cabecalho", "conteudo", "rodape", "destaques", "populares";
+@import "cabecalho", "conteudo", "rodape", "destaques", "populares", "menu";
 
 .app {
     background: #f1f1f1; 
@@ -22,5 +22,5 @@
     "conteudo"
     "rodape";
     grid-template-columns: auto;
-    grid-template-rows: 50px 100vh auto;
+    grid-template-rows: 50px auto auto;
 }

@@ -1,6 +1,30 @@
 .populares {
     padding: 3rem 0;
 
+    
+    &__cabecalho {
+        border-bottom: 1px solid #dcdcdc;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__titulo {
+        font-weight: 500;
+    }
+
+    &__icone {
+        margin-right: .25rem;
+    }
+
+    &__botao {
+        background: transparent;
+        border: none;
+        color: #333333;
+
+        &:hover {
+            color: crimson;
+        }
+    }
 
     &__conteudo {
         display: flex;
@@ -16,11 +40,40 @@
         "card-imagem"
         "card-corpo";
         grid-template-columns: 100%;
+        grid-template-rows: 173px auto;
         margin-right: 1rem;
         width: calc(20% - 1rem);
 
-        &:hover {
-            background: #333333;
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:nth-child(1):hover {
+            background: crimson;
+            color: #fdfdfd;
+            cursor: pointer;
+        }
+
+        &:nth-child(2):hover {
+            background: #25D366;
+            color: #fdfdfd;
+            cursor: pointer;
+        }
+
+        &:nth-child(3):hover {
+            background: #0088cc;
+            color: #fdfdfd;
+            cursor: pointer;
+        }
+
+        &:nth-child(4):hover {
+            background: #bc43fa;
+            color: #fdfdfd;
+            cursor: pointer;
+        }
+
+        &:nth-child(5):hover {
+            background: #ee951c;
             color: #fdfdfd;
             cursor: pointer;
         }
@@ -42,5 +95,19 @@
         padding: .75rem;
         grid-template-rows: 50px auto;
 
+    }
+
+    &__card__titulo {
+        font-size: 1.5rem;
+    }
+
+    &__card__data {
+        font-size: .9rem;
+    }
+
+    &__card__descricao {
+        text-align: justify;
+        line-height: 1.5;
+        margin: 1rem 0;
     }
 }

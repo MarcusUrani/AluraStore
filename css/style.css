@@ -1,13 +1,22 @@
 .cabecalho {
+  display: flex;
+  align-items: center;
   grid-area: cabecalho;
+  padding: 0 2rem;
 }
 
 .conteudo {
   grid-area: conteudo;
+  padding: 0 2rem;
 }
 
 .rodape {
   grid-area: rodape;
+  background: #fdfdfd;
+  color: #333333;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 1rem;
 }
 
 .destaques {
@@ -32,7 +41,7 @@
   border-end-start-radius: 10px;
 }
 .destaques__titulo:hover {
-  color: rgba(0, 0, 0, 0.5);
+  color: #333333;
   background: #fdfdfd;
   transition: ease 0.5s;
   cursor: pointer;
@@ -131,8 +140,9 @@
 .destaques__categorias__item:hover {
   cursor: pointer;
   background: #333333;
+  transition: ease 0.4s;
+  font-weight: bold;
   color: #fdfdfd;
-  transition: ease 0.5s;
 }
 .destaques__categorias__item:nth-child(1) {
   border-top-left-radius: 10px;
@@ -149,13 +159,28 @@
 .destaques__categorias__link {
   color: inherit;
 }
-.destaques__categorias__link:hover {
-  color: lightcoral;
-  transition: ease 0.5s;
-}
 
 .populares {
   padding: 3rem 0;
+}
+.populares__cabecalho {
+  border-bottom: 1px solid #dcdcdc;
+  display: flex;
+  justify-content: space-between;
+}
+.populares__titulo {
+  font-weight: 500;
+}
+.populares__icone {
+  margin-right: 0.25rem;
+}
+.populares__botao {
+  background: transparent;
+  border: none;
+  color: #333333;
+}
+.populares__botao:hover {
+  color: crimson;
 }
 .populares__conteudo {
   display: flex;
@@ -168,11 +193,35 @@
   display: grid;
   grid-template-areas: "card-imagem" "card-corpo";
   grid-template-columns: 100%;
+  grid-template-rows: 173px auto;
   margin-right: 1rem;
   width: calc(20% - 1rem);
 }
-.populares__card:hover {
-  background: #333333;
+.populares__card:last-child {
+  margin-right: 0;
+}
+.populares__card:nth-child(1):hover {
+  background: crimson;
+  color: #fdfdfd;
+  cursor: pointer;
+}
+.populares__card:nth-child(2):hover {
+  background: #25D366;
+  color: #fdfdfd;
+  cursor: pointer;
+}
+.populares__card:nth-child(3):hover {
+  background: #0088cc;
+  color: #fdfdfd;
+  cursor: pointer;
+}
+.populares__card:nth-child(4):hover {
+  background: #bc43fa;
+  color: #fdfdfd;
+  cursor: pointer;
+}
+.populares__card:nth-child(5):hover {
+  background: #ee951c;
   color: #fdfdfd;
   cursor: pointer;
 }
@@ -189,6 +238,26 @@
   padding: 0.75rem;
   grid-template-rows: 50px auto;
 }
+.populares__card__titulo {
+  font-size: 1.5rem;
+}
+.populares__card__data {
+  font-size: 0.9rem;
+}
+.populares__card__descricao {
+  text-align: justify;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+.menu__link {
+  color: #333333;
+  padding: 0.5rem 1rem;
+}
+.menu__link:hover {
+  border-bottom: 4px solid crimson;
+  transition: ease 0.1s;
+}
 
 .app {
   background: #f1f1f1;
@@ -196,7 +265,7 @@
   display: grid;
   grid-template-areas: "cabecalho" "conteudo" "rodape";
   grid-template-columns: auto;
-  grid-template-rows: 50px 100vh auto;
+  grid-template-rows: 50px auto auto;
 }
 
 /*# sourceMappingURL=style.css.map */
