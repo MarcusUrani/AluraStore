@@ -12,7 +12,7 @@
 
 .destaques {
   display: grid;
-  grid-gap: 0.2rem;
+  grid-gap: 0.5rem;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 33.33% 33.33% 33.33%;
   height: calc(100vh - 50px);
@@ -31,6 +31,12 @@
   border-end-end-radius: 10px;
   border-end-start-radius: 10px;
 }
+.destaques__titulo:hover {
+  color: rgba(0, 0, 0, 0.5);
+  background: #fdfdfd;
+  transition: ease 0.5s;
+  cursor: pointer;
+}
 .destaques__principal {
   background-image: url(../assets/img/fortnite.jpg);
   border-radius: 10px;
@@ -41,6 +47,9 @@
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 3;
+}
+.destaques__principal:hover {
+  cursor: pointer;
 }
 .destaques__secundario:nth-child(2) {
   background-image: url(../assets/img/pubg.jpg);
@@ -53,6 +62,9 @@
   grid-row-start: 1;
   grid-row-end: 1;
 }
+.destaques__secundario:nth-child(2):hover {
+  cursor: pointer;
+}
 .destaques__secundario:nth-child(3) {
   background-image: url(../assets/img/slack.png);
   border-radius: 10px;
@@ -63,6 +75,9 @@
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 2;
+}
+.destaques__secundario:nth-child(3):hover {
+  cursor: pointer;
 }
 .destaques__secundario:nth-child(4) {
   background-image: url(../assets/img/whatsapp.png);
@@ -75,6 +90,9 @@
   grid-row-start: 3;
   grid-row-end: 3;
 }
+.destaques__secundario:nth-child(4):hover {
+  cursor: pointer;
+}
 .destaques__secundario:nth-child(5) {
   background-image: url(../assets/img/cs-go.jpg);
   border-radius: 10px;
@@ -85,6 +103,9 @@
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 3;
+}
+.destaques__secundario:nth-child(5):hover {
+  cursor: pointer;
 }
 .destaques__categorias {
   grid-column-start: 1;
@@ -99,7 +120,6 @@
   justify-content: space-between;
 }
 .destaques__categorias__item {
-  border-radius: 10px;
   display: flex;
   align-items: center;
   background: #fdfdfd;
@@ -109,8 +129,22 @@
   width: 50%;
 }
 .destaques__categorias__item:hover {
-  box-shadow: black 5;
-  transition: ease 0.3s;
+  cursor: pointer;
+  background: #333333;
+  color: #fdfdfd;
+  transition: ease 0.5s;
+}
+.destaques__categorias__item:nth-child(1) {
+  border-top-left-radius: 10px;
+}
+.destaques__categorias__item:nth-child(2) {
+  border-top-right-radius: 10px;
+}
+.destaques__categorias__item:nth-child(3) {
+  border-end-start-radius: 10px;
+}
+.destaques__categorias__item:nth-child(4) {
+  border-end-end-radius: 10px;
 }
 .destaques__categorias__link {
   color: inherit;
@@ -118,6 +152,42 @@
 .destaques__categorias__link:hover {
   color: lightcoral;
   transition: ease 0.5s;
+}
+
+.populares {
+  padding: 3rem 0;
+}
+.populares__conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: conteudo;
+  padding: 1rem 0;
+}
+.populares__card {
+  background: #fdfdfd;
+  display: grid;
+  grid-template-areas: "card-imagem" "card-corpo";
+  grid-template-columns: 100%;
+  margin-right: 1rem;
+  width: calc(20% - 1rem);
+}
+.populares__card:hover {
+  background: #333333;
+  color: #fdfdfd;
+  cursor: pointer;
+}
+.populares__card__imagem {
+  grid-area: card-imagem;
+  height: 100%;
+  width: 100%;
+}
+.populares__card__corpo {
+  display: grid;
+  grid-row-gap: 0.5rem;
+  grid-template-areas: "card-cabecalho" "card-conteudo";
+  grid-area: card-corpo;
+  padding: 0.75rem;
+  grid-template-rows: 50px auto;
 }
 
 .app {

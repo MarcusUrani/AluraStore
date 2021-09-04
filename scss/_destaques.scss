@@ -1,6 +1,6 @@
 .destaques {
     display: grid;
-    grid-gap: .2rem;
+    grid-gap: .5rem;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 33.33% 33.33% 33.33%;
     height: calc(100vh - 50px);
@@ -19,6 +19,13 @@
         width: 100%;
         border-end-end-radius: 10px;
         border-end-start-radius: 10px;
+
+        &:hover {
+            color: rgba(0, 0, 0, .5);
+            background: #fdfdfd;
+            transition: ease .5s;
+            cursor: pointer;
+        }
     }
 
     &__principal {
@@ -26,6 +33,10 @@
         border-radius: 10px;
         @include backgroundDestaques(center, no-repeat, cover);
         @include gridParametros(1, 4, 1, 3);
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__secundario:nth-child(2) {
@@ -33,6 +44,10 @@
         border-radius: 10px;
         @include backgroundDestaques(center, no-repeat, cover);
         @include gridParametros(4, 4, 1, 1);
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__secundario:nth-child(3) {
@@ -40,6 +55,10 @@
         border-radius: 10px;
         @include backgroundDestaques(center, no-repeat, cover);
         @include gridParametros(4, 4, 2, 2);
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__secundario:nth-child(4) {
@@ -47,6 +66,10 @@
         border-radius: 10px;
         @include backgroundDestaques(center, no-repeat, cover);
         @include gridParametros(4, 4, 3, 3);
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__secundario:nth-child(5) {
@@ -54,6 +77,10 @@
         border-radius: 10px;
          @include backgroundDestaques(center, no-repeat, cover);
          @include gridParametros(3, 3, 3, 3);
+
+         &:hover {
+            cursor: pointer;
+        }
     }
 
     &__categorias {
@@ -67,7 +94,6 @@
         }
 
         &__item {
-            border-radius: 10px;
             display: flex;
             align-items: center;
             background: #fdfdfd;
@@ -77,8 +103,26 @@
             width: 50%;
 
             &:hover {
-                box-shadow: black 5;
-                transition: ease .3s;
+                cursor: pointer;
+                background: #333333;
+                color: #fdfdfd;
+                transition: ease .5s;
+            }
+
+            &:nth-child(1) {
+                border-top-left-radius: 10px;
+            }
+
+            &:nth-child(2) {
+                border-top-right-radius: 10px;
+            }
+
+            &:nth-child(3) {
+                border-end-start-radius: 10px;
+            }
+
+            &:nth-child(4) {
+                border-end-end-radius: 10px;
             }
         }
 
