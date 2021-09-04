@@ -11,7 +11,7 @@
     grid-row-end: $row-end;
 }
 
-@import "cabecalho", "conteudo", "rodape", "destaques", "populares", "menu";
+@import "cabecalho", "conteudo", "rodape", "destaques", "populares", "menu", "responsivo";
 
 .app {
     background: #f1f1f1; 

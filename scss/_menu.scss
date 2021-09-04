@@ -1,14 +1,10 @@
-.menu {
+.menu__link {
+    color: #333333;
+    padding: .5rem 1rem;
 
 
-    &__link {
-        color: #333333;
-        padding: .5rem 1rem;
-
-
-        &:hover {
-            border-bottom: 4px solid crimson;
-            transition: ease .1s;
-        }
+    &:hover {
+        border-bottom: 4px solid crimson;
+        transition: ease .1s;
     }
 }

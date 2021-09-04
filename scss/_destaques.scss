@@ -43,7 +43,6 @@
         background-image: url(../assets/img/pubg.jpg);
         border-radius: 10px;
         @include backgroundDestaques(center, no-repeat, cover);
-        @include gridParametros(4, 4, 1, 1);
 
         &:hover {
             cursor: pointer;
@@ -54,7 +53,6 @@
         background-image: url(../assets/img/slack.png);
         border-radius: 10px;
         @include backgroundDestaques(center, no-repeat, cover);
-        @include gridParametros(4, 4, 2, 2);
 
         &:hover {
             cursor: pointer;
@@ -65,7 +63,6 @@
         background-image: url(../assets/img/whatsapp.png);
         border-radius: 10px;
         @include backgroundDestaques(center, no-repeat, cover);
-        @include gridParametros(4, 4, 3, 3);
 
         &:hover {
             cursor: pointer;
@@ -76,7 +73,6 @@
         background-image: url(../assets/img/cs-go.jpg);
         border-radius: 10px;
          @include backgroundDestaques(center, no-repeat, cover);
-         @include gridParametros(3, 3, 3, 3);
 
          &:hover {
             cursor: pointer;
@@ -105,7 +101,7 @@
             &:hover {
                 cursor: pointer;
                 background: #333333;
-                transition: ease .4s;
+                transition: ease .5s;
                 font-weight: bold;
                 color: #fdfdfd;
             }

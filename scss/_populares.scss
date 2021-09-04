@@ -34,15 +34,13 @@
     }
 
     &__card {
+        border-radius: 10px;
         background: #fdfdfd;
         display: grid;
         grid-template-areas:
         "card-imagem"
         "card-corpo";
         grid-template-columns: 100%;
-        grid-template-rows: 173px auto;
-        margin-right: 1rem;
-        width: calc(20% - 1rem);
 
         &:last-child {
             margin-right: 0;
@@ -83,6 +81,8 @@
         grid-area: card-imagem;
         height: 100%;
         width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
 
     &__card__corpo {
