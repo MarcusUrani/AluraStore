@@ -1,5 +1,132 @@
+.cabecalho {
+  grid-area: cabecalho;
+}
+
+.conteudo {
+  grid-area: conteudo;
+}
+
+.rodape {
+  grid-area: rodape;
+}
+
+.destaques {
+  display: grid;
+  grid-gap: 0.2rem;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 33.33% 33.33% 33.33%;
+  height: calc(100vh - 50px);
+}
+.destaques .caixa {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+}
+.destaques__titulo {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fdfdfd;
+  padding: 0.6rem;
+  text-align: center;
+  width: 100%;
+  border-end-end-radius: 10px;
+  border-end-start-radius: 10px;
+}
+.destaques__principal {
+  background-image: url(../assets/img/fortnite.jpg);
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.destaques__secundario:nth-child(2) {
+  background-image: url(../assets/img/pubg.jpg);
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.destaques__secundario:nth-child(3) {
+  background-image: url(../assets/img/slack.png);
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+.destaques__secundario:nth-child(4) {
+  background-image: url(../assets/img/whatsapp.png);
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+.destaques__secundario:nth-child(5) {
+  background-image: url(../assets/img/cs-go.jpg);
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+.destaques__categorias {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+.destaques__categorias__lista {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: space-between;
+}
+.destaques__categorias__item {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  background: #fdfdfd;
+  border-left: 5px solid transparent;
+  color: #333333;
+  padding: 1rem;
+  width: 50%;
+}
+.destaques__categorias__item:hover {
+  box-shadow: black 5;
+  transition: ease 0.3s;
+}
+.destaques__categorias__link {
+  color: inherit;
+}
+.destaques__categorias__link:hover {
+  color: lightcoral;
+  transition: ease 0.5s;
+}
+
 .app {
   background: #f1f1f1;
-  display: grid;
   font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-areas: "cabecalho" "conteudo" "rodape";
+  grid-template-columns: auto;
+  grid-template-rows: 50px 100vh auto;
 }
+
+/*# sourceMappingURL=style.css.map */

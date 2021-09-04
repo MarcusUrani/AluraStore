@@ -1,1 +1,26 @@
-@import "header";
+@mixin backgroundDestaques($bkg-position, $bkg-repeat, $bkg-size) {
+        background-position: $bkg-position;
+        background-repeat: $bkg-repeat;
+        background-size: $bkg-size;
+}
+
+@mixin gridParametros($column-start, $column-end, $row-start, $row-end) {
+    grid-column-start: $column-start;
+    grid-column-end: $column-end;
+    grid-row-start: $row-start;
+    grid-row-end: $row-end;
+}
+
+@import "cabecalho", "conteudo", "rodape", "destaques";
+
+.app {
+    background: #f1f1f1; 
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid; 
+    grid-template-areas: 
+    "cabecalho"
+    "conteudo"
+    "rodape";
+    grid-template-columns: auto;
+    grid-template-rows: 50px 100vh auto;
+}
