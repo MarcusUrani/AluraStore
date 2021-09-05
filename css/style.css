@@ -244,39 +244,39 @@
 }
 
 @media screen and (min-width: 0) {
-  .destaques__principal, .destaques__categorias {
+  .destaques__principal, .destaques__categorias, .jogos__principal, .jogos__categorias {
     grid-column: 1/5;
   }
 
-  .destaques__secundario:nth-child(2) {
+  .destaques__secundario:nth-child(2), .jogos__secundario:nth-child(2) {
     display: none;
     grid-column: none;
     grid-row: none;
   }
 
-  .destaques__secundario:nth-child(3) {
+  .destaques__secundario:nth-child(3), .jogos__secundario:nth-child(3) {
     display: none;
     grid-column: none;
     grid-row: none;
   }
 
-  .destaques__secundario:nth-child(4) {
+  .destaques__secundario:nth-child(4), .jogos__secundario:nth-child(4) {
     display: none;
     grid-column: none;
     grid-row: none;
   }
 
-  .destaques__secundario:nth-child(5) {
+  .destaques__secundario:nth-child(5), .jogos__secundario:nth-child(5) {
     display: none;
     grid-column: none;
     grid-row: none;
   }
 
-  .populares__conteudo {
+  .populares__conteudo, .jogos__populares__conteudo {
     flex-direction: column;
   }
 
-  .populares__card {
+  .populares__card, .jogos__populares__card {
     grid-template-rows: 150px auto;
     width: 100%;
     margin-bottom: 3rem;
@@ -284,11 +284,11 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .destaques__principal {
+  .destaques__principal, .jogos__principal {
     grid-column: 1/4;
   }
 
-  .destaques__secundario:nth-child(2) {
+  .destaques__secundario:nth-child(2), .jogos__secundario:nth-child(2) {
     display: flex;
     grid-column-start: 4;
     grid-column-end: 4;
@@ -296,7 +296,7 @@
     grid-row-end: 1;
   }
 
-  .destaques__secundario:nth-child(3) {
+  .destaques__secundario:nth-child(3), .jogos__secundario:nth-child(3) {
     display: flex;
     grid-column-start: 4;
     grid-column-end: 4;
@@ -304,7 +304,7 @@
     grid-row-end: 2;
   }
 
-  .destaques__secundario:nth-child(4) {
+  .destaques__secundario:nth-child(4), .jogos__secundario:nth-child(4) {
     display: flex;
     grid-column-start: 4;
     grid-column-end: 4;
@@ -312,7 +312,7 @@
     grid-row-end: 3;
   }
 
-  .destaques__secundario:nth-child(5) {
+  .destaques__secundario:nth-child(5), .jogos__secundario:nth-child(5) {
     display: flex;
     grid-column-start: 3;
     grid-column-end: 3;
@@ -320,31 +320,265 @@
     grid-row-end: 3;
   }
 
-  .destaques__categorias {
+  .destaques__categorias, .jogos__categorias {
     grid-column: 1/3;
   }
 
-  .populares__conteudo {
+  .populares__conteudo, .jogos__populares__conteudo {
     flex-direction: row;
   }
 
-  .populares__card {
+  .populares__card, .jogos__populares__card {
     grid-template-rows: 173px auto;
     margin-right: 1rem;
     width: calc(50% - 1rem);
   }
 }
 @media screen and (min-width: 992px) {
-  .populares__card {
+  .populares__card, .jogos__populares__card {
     width: calc(33.33% - 1rem);
   }
 }
 @media screen and (min-width: 1200px) {
-  .populares__card {
+  .populares__card, .jogos__populares__card {
     width: calc(20% - 1rem);
     margin-bottom: 0;
   }
 }
+.jogos {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 33.33% 33.33% 33.33%;
+  height: calc(100vh - 50px);
+}
+.jogos .caixa {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+}
+.jogos__titulo {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fdfdfd;
+  padding: 0.6em;
+  text-align: center;
+  width: 100%;
+  border-end-end-radius: 10px;
+  border-end-start-radius: 10px;
+}
+.jogos__titulo:hover {
+  color: #333333;
+  background-color: #fdfdfd;
+  transition: ease 0.5s;
+  cursor: pointer;
+}
+.jogos__principal {
+  background-image: url(../assets/img/fortnite.jpg);
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.jogos__principal:hover {
+  cursor: pointer;
+}
+.jogos__secundario:nth-child(2) {
+  background-image: url(../assets/img/pubg.jpg);
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.jogos__secundario:nth-child(2):hover {
+  cursor: pointer;
+}
+.jogos__secundario:nth-child(3) {
+  background-image: url(../assets/img/warzone.jpg);
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+.jogos__secundario:nth-child(3):hover {
+  cursor: pointer;
+}
+.jogos__secundario:nth-child(4) {
+  background-image: url(../assets/img/valorant.png);
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+.jogos__secundario:nth-child(4):hover {
+  cursor: pointer;
+}
+.jogos__secundario:nth-child(5) {
+  background-image: url(../assets/img/cs-go.jpg);
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+.jogos__secundario:nth-child(5):hover {
+  cursor: pointer;
+}
+.jogos__categorias {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+.jogos__categorias__lista {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: space-between;
+}
+.jogos__categorias__item {
+  display: flex;
+  align-items: center;
+  background: #fdfdfd;
+  border-left: 5px solid transparent;
+  color: #333333;
+  padding: 1rem;
+  width: 50%;
+}
+.jogos__categorias__item:hover {
+  cursor: pointer;
+  color: #fdfdfd;
+  background: #333333;
+  transition: ease 0.5s;
+  text-decoration: underline;
+}
+.jogos__categorias__item:active {
+  color: crimson;
+}
+.jogos__categorias__item:nth-child(1) {
+  border-top-left-radius: 10px;
+}
+.jogos__categorias__item:nth-child(2) {
+  border-top-right-radius: 10px;
+}
+.jogos__categorias__item:nth-child(3) {
+  border-bottom-left-radius: 10px;
+}
+.jogos__categorias__item:nth-child(4) {
+  border-bottom-right-radius: 10px;
+}
+.jogos__categorias__link {
+  color: inherit;
+}
+
+.jogos__populares {
+  padding: 3rem 0;
+}
+.jogos__populares__cabecalho {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dcdcdc;
+}
+.jogos__populares__titulo {
+  font-weight: 500;
+}
+.jogos__populares__icone {
+  margin-right: 0.25rem;
+}
+.jogos__populares__botao {
+  color: #333333;
+  border: none;
+  background: transparent;
+}
+.jogos__populares__botao:hover {
+  color: crimson;
+}
+.jogos__populares__conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: conteudo;
+  padding: 1rem 0;
+}
+.jogos__populares__card {
+  border-radius: 10px;
+  background: #fdfdfd;
+  display: grid;
+  grid-template-areas: "card-imagem" "card-corpo";
+  grid-template-columns: 100%;
+}
+.jogos__populares__card:last-child {
+  margin-right: 0;
+}
+.jogos__populares__card:nth-child(1):hover {
+  background: #25D366;
+  cursor: pointer;
+  color: #fdfdfd;
+}
+.jogos__populares__card:nth-child(2):hover {
+  background: #0088cc;
+  cursor: pointer;
+  color: #fdfdfd;
+}
+.jogos__populares__card:nth-child(3):hover {
+  background: #ee951c;
+  cursor: pointer;
+  color: #fdfdfd;
+}
+.jogos__populares__card:nth-child(4):hover {
+  background: #bc43fa;
+  cursor: pointer;
+  color: #fdfdfd;
+}
+.jogos__populares__card:nth-child(5):hover {
+  background: crimson;
+  cursor: pointer;
+  color: #fdfdfd;
+}
+.jogos__populares__card__imagem {
+  grid-area: card-imagem;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.jogos__populares__card__corpo {
+  display: grid;
+  row-gap: 0.5rem;
+  grid-template-areas: "card-cabecalho" "card-conteudo";
+  grid-area: card-corpo;
+  padding: 0.75rem;
+  grid-template-rows: 50px auto;
+}
+.jogos__populares__card__titulo {
+  font-size: 1.5rem;
+}
+.jogos__populares__card__date {
+  font-size: 0.9rem;
+}
+.jogos__populares__card__descricao {
+  text-align: justify;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
 .app {
   background: #f1f1f1;
   font-family: Arial, Helvetica, sans-serif;

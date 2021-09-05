@@ -19,10 +19,10 @@
     &__botao {
         background: transparent;
         border: none;
-        color: #333333;
+        color: $cor-preta;
 
         &:hover {
-            color: crimson;
+            color: $cor-vermelha;
         }
     }
 
@@ -35,7 +35,7 @@
 
     &__card {
         border-radius: 10px;
-        background: #fdfdfd;
+        background: $cor-branca;
         display: grid;
         grid-template-areas:
         "card-imagem"
@@ -47,32 +47,32 @@
         }
 
         &:nth-child(1):hover {
-            background: crimson;
-            color: #fdfdfd;
+            background: $cor-vermelha;
+            color: $cor-branca;
             cursor: pointer;
         }
 
         &:nth-child(2):hover {
             background: #25D366;
-            color: #fdfdfd;
+            color: $cor-branca;
             cursor: pointer;
         }
 
         &:nth-child(3):hover {
             background: #0088cc;
-            color: #fdfdfd;
+            color: $cor-branca;
             cursor: pointer;
         }
 
         &:nth-child(4):hover {
             background: #bc43fa;
-            color: #fdfdfd;
+            color: $cor-branca;
             cursor: pointer;
         }
 
         &:nth-child(5):hover {
             background: #ee951c;
-            color: #fdfdfd;
+            color: $cor-branca;
             cursor: pointer;
         }
     }

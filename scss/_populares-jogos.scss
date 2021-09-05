@@ -1,0 +1,112 @@
+.jogos__populares {
+    padding: 3rem 0;
+
+    &__cabecalho {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #dcdcdc;
+    }
+
+    &__titulo {
+        font-weight: 500;
+    }
+
+    &__icone {
+        margin-right: .25rem;
+    }
+
+    &__botao {
+        color: $cor-preta;
+        border: none;
+        background: transparent;
+
+        &:hover {
+            color: $cor-vermelha;
+        }
+    }
+
+    &__conteudo {
+        display: flex;
+        flex-wrap: wrap;
+        grid-area: conteudo;
+        padding: 1rem 0;
+    }
+
+    &__card {
+        border-radius: 10px;
+        background: $cor-branca;
+        display: grid;
+        grid-template-areas: 
+        "card-imagem"
+        "card-corpo";
+        grid-template-columns: 100%;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:nth-child(1):hover {
+            background: #25D366;
+            cursor: pointer;
+            color: $cor-branca;
+        }
+
+        &:nth-child(2):hover {
+            background: #0088cc;
+            cursor: pointer;
+            color: $cor-branca;
+        }
+
+        &:nth-child(3):hover {
+            background: #ee951c;
+            cursor: pointer;
+            color: $cor-branca;
+        }
+
+        &:nth-child(4):hover {
+            background: #bc43fa;
+            cursor: pointer;
+            color: $cor-branca;
+        }
+
+        &:nth-child(5):hover {
+            background: $cor-vermelha;
+            cursor: pointer;
+            color: $cor-branca;
+        }
+
+        &__imagem {
+            grid-area: card-imagem;
+            height: 100%;
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        &__corpo {
+            display: grid;
+            row-gap: .5rem;
+            grid-template-areas: 
+            "card-cabecalho"
+            "card-conteudo";
+            grid-area: card-corpo;
+            padding: .75rem;
+            grid-template-rows: 50px auto;
+        }
+
+        &__titulo {
+            font-size: 1.5rem;
+        }
+
+        &__date {
+            font-size: .9rem;
+        }
+
+        &__descricao {
+            text-align: justify;
+            line-height: 1.5;
+            margin: 1rem 0;
+        }
+    }
+    
+}

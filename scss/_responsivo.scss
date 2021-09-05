@@ -1,37 +1,37 @@
 @media screen and (min-width: 0) {
-    .destaques__principal, .destaques__categorias {
+    .destaques__principal, .destaques__categorias, .jogos__principal, .jogos__categorias {
         grid-column: 1 / 5;
     }
 
-    .destaques__secundario:nth-child(2) {
+    .destaques__secundario:nth-child(2), .jogos__secundario:nth-child(2) {
         display: none;
         grid-column: none;
         grid-row: none;
     }
 
-    .destaques__secundario:nth-child(3) {
+    .destaques__secundario:nth-child(3), .jogos__secundario:nth-child(3) {
         display: none;
         grid-column: none;
         grid-row: none;
     }
 
-    .destaques__secundario:nth-child(4) {
+    .destaques__secundario:nth-child(4), .jogos__secundario:nth-child(4) {
         display: none;
         grid-column: none;
         grid-row: none;
     }
 
-    .destaques__secundario:nth-child(5) {
+    .destaques__secundario:nth-child(5), .jogos__secundario:nth-child(5) {
         display: none;
         grid-column: none;
         grid-row: none;
     }
 
-    .populares__conteudo {
+    .populares__conteudo, .jogos__populares__conteudo {
         flex-direction: column;
     }
 
-    .populares__card {
+    .populares__card, .jogos__populares__card {
         grid-template-rows: 150px auto;
         width: 100%;
         margin-bottom: 3rem;
@@ -39,39 +39,39 @@
     }
 }
 @media screen and (min-width: 768px) {
-    .destaques__principal {
+    .destaques__principal, .jogos__principal {
         grid-column: 1 / 4;
     }
 
-    .destaques__secundario:nth-child(2) {
+    .destaques__secundario:nth-child(2), .jogos__secundario:nth-child(2) {
         display: flex;
         @include gridParametros(4, 4, 1, 1);
     }
 
-    .destaques__secundario:nth-child(3) {
+    .destaques__secundario:nth-child(3), .jogos__secundario:nth-child(3) {
         display: flex;
         @include gridParametros(4, 4, 2, 2);
     }
 
-    .destaques__secundario:nth-child(4) {
+    .destaques__secundario:nth-child(4), .jogos__secundario:nth-child(4) {
         display: flex;
         @include gridParametros(4, 4, 3, 3);
     }
 
-    .destaques__secundario:nth-child(5) {
+    .destaques__secundario:nth-child(5), .jogos__secundario:nth-child(5) {
         display: flex;
         @include gridParametros(3, 3, 3, 3);
     }
 
-    .destaques__categorias {
+    .destaques__categorias, .jogos__categorias {
         grid-column: 1 / 3;
     }
 
-    .populares__conteudo {
+    .populares__conteudo, .jogos__populares__conteudo {
         flex-direction: row;
     }
 
-    .populares__card {
+    .populares__card, .jogos__populares__card {
         grid-template-rows: 173px auto;
         margin-right: 1rem;
         width: calc(50% - 1rem);
@@ -79,13 +79,13 @@
 }
 
 @media screen and (min-width: 992px) {
-    .populares__card {
+    .populares__card, .jogos__populares__card {
         width: calc(33.33% - 1rem);
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .populares__card {
+    .populares__card, .jogos__populares__card {
         width: calc(20% - 1rem);
         margin-bottom: 0;
     }

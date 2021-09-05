@@ -1,3 +1,9 @@
+//Variáveis
+$cor-branca: #fdfdfd;
+$cor-preta: #333333;
+$cor-vermelha: crimson; 
+
+//Mixins
 @mixin backgroundDestaques($bkg-position, $bkg-repeat, $bkg-size) {
         background-position: $bkg-position;
         background-repeat: $bkg-repeat;
@@ -11,7 +17,7 @@
     grid-row-end: $row-end;
 }
 
-@import "cabecalho", "conteudo", "rodape", "destaques", "populares", "menu", "responsivo";
+@import "cabecalho", "conteudo", "rodape", "destaques", "populares", "menu", "responsivo", "jogos-populares", "populares-jogos";
 
 .app {
     background: #f1f1f1; 
